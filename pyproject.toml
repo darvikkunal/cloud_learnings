@@ -1,0 +1,22 @@
+[project]
+name = "python"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "DarvikKunal Banda", email = "123832825+darvikkunal@users.noreply.github.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "aws-glue-sessions>=1.0.9",
+    "boto3>=1.42.24",
+    "fastparquet>=2025.12.0",
+    "ipykernel>=7.1.0",
+    "jupyter>=1.1.1",
+    "pandas>=2.3.3",
+    "pyarrow>=22.0.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.9.17,<0.10.0"]
+build-backend = "uv_build"

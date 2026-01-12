@@ -1,0 +1,29 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Lambda function to retrieve environment variables
+
+Globals:
+  Function:
+    Timeout: 300
+    Environment:
+      Variables:
+        RAW_BUCKET: aws-cli-23
+
+Resources:
+  returnEV:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: lambda/
+      Handler: ev_retrieval.lambda_handler
+      Runtime: python3.12
+      Environment:
+        Variables:
+          STANDARDIZED_BUCKET: aws-cli-23-standardized
+
+Outputs:
+  ReturnEVFunction:
+    Description: "returnEV Lambda Function ARN"
+    Value: !GetAtt returnEV.Arn
+  ReturnEVFunctionName:
+    Description: "returnEV Lambda Function Name"
+    Value: !Ref returnEV

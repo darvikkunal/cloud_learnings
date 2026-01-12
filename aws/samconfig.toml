@@ -1,0 +1,20 @@
+version = 0.1
+
+[default.global.parameters]
+stack_name = "testing-ev-lambda"
+region = "ap-south-1"
+
+[default.sync.parameters]
+template_file = "/Users/darvikkunalbanda/DATA_ENGINEERING/python/aws/template.yaml"
+dependency_layer = true
+code = true
+skip_deploy_sync = true
+use_container = true
+watch = true
+
+[default.deploy.parameters]
+resolve_s3 = true
+s3_prefix = "testing-ev-lambda"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+image_repositories = []
