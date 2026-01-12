@@ -8,3 +8,9 @@ wheels/
 
 # Virtual environments
 .venv
+
+# AWS Secrets
+data/AWS_samcli_accessKeys.csv
+data
+aws/samconfig.toml
+aws/.aws-sam
